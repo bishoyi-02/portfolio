@@ -2,63 +2,31 @@
     padding: 0;
     margin: 0;
     /* top: 0; */
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Montserrat';
+    /* font-family: 'Roboto'; */
     user-select: none;
   }
   
   .container {
-    /* background-color: rgb(217,223,221); */
     background-color: #ffffff;
-    /* background-color: white; */
     overflow: hidden;
   }
+
   *::-webkit-scrollbar {
     display: none;
   }
-  .salute {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    /* background-color: rgb(253,112,28); */
-  }
-  
-  .saluteTextContainer {
-    flex: 3;
-  }
-  
-  .saluteImgContainer {
-    flex: 1;
-  }
-  
-  .saluteText {
-    color: black;
-    /* font-size: 10vw; */
-    cursor: default;
-  }
-  
-  .saluteImg {
-    width: 100%;
-  }
-  
   
   .nameContainer {
     height: 100vh;
     width: 101%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    /* background-image: url("./img/bg.jpg"); */
-    /* background-position: center; */
-    /* background-repeat: no-repeat; */
+    align-items: center;/
   }
   
-  .autoType{
-
-  }
 
   .name {
-    font-size: 7vw;
+    font-size: 4vw;
     color: rgb(174, 17, 0);
     cursor: default;
     text-align: center;
@@ -74,32 +42,74 @@
     opacity: 1; 
   }
 
+  .skillsTitle {
+    font-size: 4vw;    
+    color: #936636;
+    background-color: #ffffac;
+    border-radius: 25px;
+    padding: 20px;
+    width: max-content;
+    text-align: center;
+    align-self: center;
+  }
+
+  @keyframes slide{
+    from{
+      transform: translateX(0);
+    }
+    to{
+      transform: translateX(-100%);
+    }
+  }
+
+  .logosContainer{
+    padding-top: 15vw;
+    padding-bottom: 15vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10vw;
+  }
+
+  .logosSubContainer{
+    border-radius: 30px;
+    /* margin-left: 5vw;
+    margin-right: 5vw; */
+    background-color: #f1f1f1;
+    overflow: hidden;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+  }
+
+  .logosRow{
+    overflow: hidden;
+    padding: 5px 0;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .logosSlide{
+    display: inline-block;
+    animation: 25s slide infinite linear;
+  }
+
+  .logosSlide iconify-icon{
+    font-size: 5vw;
+    margin: 0 5px;
+  }
   
 
   video{
     width: 100%;
     height: 100%;
-    /* object-fit: fill; */
+    object-fit: fill;
   }
   
   .jobTitleContainer {
     height: 100vh;
   }
   
-  .dark {
-    /* background: url("./img/bg1.png"); */
-    /* color: ; */
-  }
-  .purple {
-    /* background: blanchedalmond url("./img/bg2.png"); */
-  }
-  
-  .jobTitle {
-    font-size: 7vw;
-    color: rgb(17,17,17);
-    line-height: 100vh;
-    cursor: default;
-  }
   
   .projects {
     display: flex;
@@ -109,22 +119,25 @@
   }
   
   .projectsTitle {
-    font-size: 7vw;
-    color: rgb(17,17,17);
-    background-color: #fefe90;
+    font-size: 4vw;    
+    color: #C0564B;
+    background-color: #fff5de;
     border-radius: 50px;
     padding: 20px;
+    width: fit-content;
+    align-self: center;
+    text-align: center;
   }
   
   .project {
     display: flex;
     align-items: center;
     gap: 100px;
-    height: 100vh;
+    height: 80vh;
     overflow: hidden;
     background-color:#d7d3f6;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     padding-left:50;
     padding-right:50;
     color: rgb(39,28,100);
@@ -154,6 +167,38 @@
     overflow: hidden;
   }
   
+  .hiddenPhone{
+    opacity:0;
+    transition: all 1s;
+    transform: translateX(100%);
+    filter: blur(5px);
+  }
+
+  .hiddenLaptop{
+    opacity:0;
+    transition: all 1s;
+    transform: translateX(-100%);
+    filter: blur(5px);
+  }
+
+  .showPhone{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(35%);
+  }
+
+  .showLaptop{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0%);
+  }
+
+  /* @media (prefers-reduced-motion) {
+    .hidden{
+      transition: none;
+    }
+  } */
+
   .phoneScreen::-webkit-scrollbar {
     display: none;
   }
@@ -171,7 +216,7 @@
   }
   
   .projectTitle {
-    font-size: 7vw;
+    font-size: 4vw;
     color: inherit;
   }
   
@@ -234,67 +279,10 @@
   .laptopScreen::-webkit-scrollbar {
     display: none;
   }
-  
-  .githubContainer {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-  }
-  
-  .githubTitle {
-    font-size: 100px;
-    color: #333;
-  }
-  
-  .githubChart {
-    width: 820px;
-    text-align: center;
-  }
-  
-  .dates {
-    padding: 10px;
-    color: #555;
-    font-size: 12px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .boxContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-  }
-  
-  .box {
-    width: 15px;
-    height: 15px;
-    background-color: #171c25;
-    border-radius: 2px;
-    cursor: pointer;
-    transition: 3s all ease;
-  }
-  
-  .active:nth-child(4n) {
-    background-color: #195b2c;
-  }
-  
-  .githubChart:hover .active:nth-child(2n+1){
-    background-color: #195b2c;
-  }
-  .githubChart:hover .active:nth-child(2n){
-    background-color: #063f24;
-  }
-  
-  .githubSm{
-    display: none;
-  }
 
   .separator {
     height: 1px;
     background-color: #575252;
-    /* position: absolute; */
     top: 0%;
     bottom: auto;
     left: 0%;
@@ -307,6 +295,7 @@
     background-color: white;
     align-items: center;
     justify-content: center;
+    justify-content: space-around;
   }
 
   .subContactContainer{
@@ -318,21 +307,21 @@
   }
 
   .contactHeading{
-    font-size: 7vw;
+    font-size: 4vw;
     text-justify: center;
     font-weight: 600;
     width: 25%;
   }
   
-  iconify-icon{
+  .linksBar iconify-icon{
     width: 100%;
     height: 100%;
+    font-size: 5vw;
   }
 
   .profileIcon{
     color: rgb(0, 0, 0);
-    border-radius: 35px;
-    padding:5px;
+    border-radius: 50px;
   }
 
   .profileIcon:hover{
@@ -344,8 +333,9 @@
   .linksBar{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 40vh;
+    gap: 1vh;
+    justify-content: space-around;
+    height: 20vh;
   }
 
   @media screen and (max-width:1350px) {
@@ -354,8 +344,12 @@
       object-fit: cover;
       height: 100vh;
     }
+    .logosContainer{
+      padding-bottom: 2vw;
+    }
     .projects{
-      padding:  75px 75px;;
+      padding:  75px 75px;
+      gap: 10vh;
       text-align: center;
     }
   
@@ -371,44 +365,36 @@
   
     .phone,.laptop{
       transform: none !important;
+      filter: none !important;
     }
 
-    .contactHeading{
-      font-size: 6vw;
-      font-weight: 600;
-      width: 25%;
-    }
-
-    .linksBar{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 35vh;
+    .contactContainer{
+      height: 60vh;
     }
     
-    .githubChart{
-      display: none;
+    .contactHeading{
+      font-size: 6vw;
     }
-  
-    .githubTitle{
-      text-align: center;
-      font-size: 10vw;
+    
+    .linksBar{
+      height: 20vh;
     }
-  
-    .githubSm{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      color:#555;
-      font-size: 30px;
-      text-align: center;
+
+    .linksBar iconify-icon{
+      width: 100%;
+      height: 100%;
+      font-size: 6vw;
     }
+    
+    
   }
 
   @media screen and (max-width:700px){
     .name{
       font-size: 14vw;
+    }
+    .logosContainer{
+      padding-bottom: 20vw;
     }
     .projectsTitle{
       font-size: 10vw;
@@ -418,13 +404,21 @@
       margin-left: 3vh;
       margin-right: 3vh;
       margin-bottom: 10vh;
+      gap: 10vh;
     }
+
     .projectTitle{
       font-size: 12vw;
     }
+    .skillsTitle{
+      font-size: 12vw;
+    }
+    .logosSlide iconify-icon{
+      font-size: 70px;
+    }
     .projectDescription{
       font-size: 4vw;
-      line-height: 22px;
+      line-height: 30px;
     }
     .laptopScreen {
       width: 276px;
@@ -437,10 +431,27 @@
     .laptopScreenTemplate{
       width: 368px;
     }
+
+    .contactContainer{
+      display: flex;
+      height: 40vh;
+      background-color: white;
+      align-items: center;
+      justify-content: center;
+    }
     
     .contactHeading{
       font-size: 10vw;
     }
     
+    .linksBar{
+      height: 20vh;
+    }
+
+    .linksBar iconify-icon{
+      width: 100%;
+      height: 100%;
+      font-size: 8vw;
+    }
     
   }
