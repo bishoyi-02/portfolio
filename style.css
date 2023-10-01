@@ -74,11 +74,12 @@
     opacity: 1; 
   }
 
+  
 
   video{
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    /* object-fit: fill; */
   }
   
   .jobTitleContainer {
@@ -111,7 +112,7 @@
     font-size: 7vw;
     color: rgb(17,17,17);
     background-color: #fefe90;
-    border-radius: 30px;
+    border-radius: 50px;
     padding: 20px;
   }
   
@@ -150,7 +151,7 @@
     top: 17px;
     left: 18px;
     border-radius: 28px;
-    overflow: scroll;
+    overflow: hidden;
   }
   
   .phoneScreen::-webkit-scrollbar {
@@ -302,21 +303,32 @@
   }
   .contactContainer{
     display: flex;
+    height: 80vh;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .subContactContainer{
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 80vh;
-    background-color: white;
-    /* padding-left: 10vw;
-    padding-right: 10vw; */
+    /* max-width: 50%; */
   }
 
   .contactHeading{
-    font-size: 5vw;
+    font-size: 7vw;
+    text-justify: center;
     font-weight: 600;
     width: 25%;
   }
   
+  iconify-icon{
+    width: 100%;
+    height: 100%;
+  }
+
   .profileIcon{
     color: rgb(0, 0, 0);
     border-radius: 35px;
@@ -339,7 +351,7 @@
   @media screen and (max-width:1350px) {
 
     video{
-      object-fit: contain;
+      object-fit: cover;
       height: 100vh;
     }
     .projects{
@@ -395,6 +407,40 @@
   }
 
   @media screen and (max-width:700px){
+    .name{
+      font-size: 14vw;
+    }
+    .projectsTitle{
+      font-size: 10vw;
+    }
+    .projects{
+      padding: 0;
+      margin-left: 3vh;
+      margin-right: 3vh;
+      margin-bottom: 10vh;
+    }
+    .projectTitle{
+      font-size: 12vw;
+    }
+    .projectDescription{
+      font-size: 4vw;
+      line-height: 22px;
+    }
+    .laptopScreen {
+      width: 276px;
+      height: 174px;
+      position: absolute;
+      top: 11px;
+      left: 159px;
+      overflow: scroll;
+  }
+    .laptopScreenTemplate{
+      width: 368px;
+    }
+    
+    .contactHeading{
+      font-size: 10vw;
+    }
     
     
   }
